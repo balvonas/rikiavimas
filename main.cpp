@@ -6,7 +6,6 @@ template <class T> void selection(T *, int, int, int &, int &);
 template <class T> void insertion(T *, int, int, int &, int &);
 template <class T> void bubble(T *, int, int, int &, int &);
 template <class T> void partition(T &, int &, int &, int &, int &, int &);
-//template <class T> void quicksort(T *, int, int, int &, int &);
 using namespace std;
 
 int main(void)
@@ -103,37 +102,6 @@ int main(void)
     cout << "Sukeitimo operaciju (1000-0): " << Sb << endl;
     cout << "Lyginimo operaciju (1000-0): " << Lb << endl;
     cout << endl;
-
-
-    for (i = 0; i < N; i++)
-      a[i] = 1000*(1.0*rand()/RAND_MAX);
-    L=0;
-    S=0;
-    La=0;
-    Sa=0;
-    Lb=0;
-    Sb=0;
-
-/*    quicksort(a, 0, N-1, L, S);
-    //Darom masyva nuo 0 iki 1000
-    for (i = 0; i < N; i++)
-      a[i] = i;
-    quicksort(a, 0, N-1, La, Sa);
-    //Darom masyva nuo 1000 iki 0
-    for (i = 0; i < N; i++)
-      a[i] = 1000-i;
-    quicksort(a, 0, N-1, Lb, Sb);
-
-    cout << endl;
-    cout << "Quicksort metodas" << endl;
-    cout << "Sukeitimo operaciju (random): " << S << endl;
-    cout << "Lyginimo operaciju (random): " << L << endl;
-    cout << "Sukeitimo operaciju (0-1000): " << Sa << endl;
-    cout << "Lyginimo operaciju (0-1000): " << La << endl;
-    cout << "Sukeitimo operaciju (1000-0): " << Sb << endl;
-    cout << "Lyginimo operaciju (1000-0): " << Lb << endl;
-    cout << endl;*/
-
 }
 
 // Sukeièia elementus vietomis
@@ -223,20 +191,3 @@ int partition(T a[], int left, int right, int pivotIndex, int &suk, int &lyg)
     while (left < right);
     return right;
 }
-
-
-//-------------------------------------------
-// quicksort algoritmas
-//-------------------------------------------
-/*template <class T>
-void quicksort(T a[], int left, int right, int &sksuk, int &sklyg)
-{
-    if (left < right)
-    {
-        int pivot = (left + right) / 2; // middle
-        int pivotNew = partition(a, left, right, pivot, sksuk, sklyg);
-        quicksort(a, left, pivotNew - 1, sksuk, sklyg);
-        quicksort(a, pivotNew + 1, right, sksuk, sklyg);
-        sklyg++;
-    }
-}*/
